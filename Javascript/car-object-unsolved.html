@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8" />
+		<title>My First Object</title>
+	</head>
+	<body>
+		<script>
+			var car = {
+				make: "Honda",
+				model: "Fit",
+				color: "Blue Raspberry",
+				mileage: 3000,
+				isWorking: true,
+
+				driveToWork: function() {
+					alert("Old Mileage: " + this.mileage);
+
+					this.mileage = this.mileage + 8;
+
+					alert("New mileage: " + this.mileage);
+				},
+
+				driveAroundWorld: function() {
+					alert("Old Mileage: " + this.mileage);
+
+					this.mileage = this.mileage + 24000;
+
+					alert("New Mileage: " + this.mileage);
+					alert("Car needs a tuneup!");
+
+					this.isWorking = false;
+				},
+
+				getTuneUp: function() {
+					alert("Your tuneup is complete... Car is ready to go!");
+					this.isWorking = true;
+				},
+
+				honk: function() {
+					alert("Honk! Honk!");
+				}
+			};
+
+			// How would we log...
+
+			// The car's make?
+			console.log(car.make);
+
+			// The car's model?
+			console.log(car.model);
+
+			// The car's mileage?
+			console.log(car.mileage);
+
+			// How would we run the car's driveToWork method?
+			// car.driveToWork();
+			// How would we run the car's driveAroundWorld method?
+			// car.driveAroundWorld();
+			// How would we run the getTuneUp method?
+			// car.getTuneUp();
+
+			document.onkeyup = function(event) {
+				var userInput = event.key;
+
+				if (userInput == "d") {
+					car.driveToWork();
+				}
+				if (userInput == "w") {
+					car.driveAroundWorld();
+				}
+				if (userInput == "t") {
+					car.getTuneUp();
+				}
+			};
+
+			// var dogAge = prompt("How old is your dog?");
+			// var dog = {
+			// 	age: 4,
+			// 	breed: "Poodle",
+			// 	color: "black",
+
+			// 	howOld: function() {
+			// 		if (dogAge == 4) {
+			// 			alert("OMG Mine Too!");
+			// 		} else if (dogAge < 4) {
+			// 			alert("AWW how cute!");
+			// 		} else {
+			// 			alert("Oh that's cool...");
+			// 		}
+			// 	}
+			// };
+			// dog.howOld(dogAge);
+		</script>
+
+		<h1>
+			Welcome to your car!
+		</h1>
+		<h3>
+			To drive to work, press "d," to drive around the world, press "w," and to
+			get a tune-up, press "t"!!!
+		</h3>
+	</body>
+</html>
