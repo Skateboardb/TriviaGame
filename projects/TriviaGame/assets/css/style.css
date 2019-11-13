@@ -1,0 +1,7 @@
+.container-fluid {
+	background-image: url("../images/background.jpg");
+}
+
+#main-area {
+	background-color: green;
+}
