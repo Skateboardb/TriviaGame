@@ -1,7 +1,19 @@
-.container-fluid {
+.bg {
 	background-image: url("../images/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: fixed;
+	bottom: 0;
+	height: 100%;
 }
 
 #main-area {
-	background-color: green;
+	/* background-color: green; */
+	height: 100%;
+}
+
+#startBtn {
+	/* width: 200px; */
+	font-size: 3em;
+	margin-top: 40px;
 }
