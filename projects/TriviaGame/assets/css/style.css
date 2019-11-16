@@ -17,3 +17,12 @@
 	font-size: 3em;
 	margin-top: 40px;
 }
+
+.custom-control {
+	display: inline-block;
+	margin: 0 30px;
+}
+
+.questionDiv {
+	margin: 20px 0;
+}
