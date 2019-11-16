@@ -1,33 +1,11 @@
 // Define variable quiz to be loaded onto the page
 var quiz = $("<div></div>");
-var questionDiv = $("<div></div>").addClass("questionDiv");
-
-// 	.append(radioButton);
-
-var questionHeader = $("<h3></h3>");
-// var radioButton = $("<div></div>").addClass("custom-control custom-radio");
-// .append(input, label);
-// var input = $("<input>")
-// 	.attr("type", "radio")
-// 	.addClass("custom-control-input")
-// 	.attr("id", "")
-// 	.attr("name", "");
-// var label = $("<label></label>").addClass("custom-control-label");
-// .attr("for", "");
 
 var rockLee = "Who is known for his taijutsu prowess?";
 var questionCounter = 0;
 
 // array of possible questions and answers
 var questions = [
-	// (shikamaru = {
-	// 	question:
-	// 		"Which leaf village shinobi is best known for inelligence and strategic thinking?",
-	// 	choice1: "Rock Lee",
-	// 	choice2: "Kakashi Hatake",
-	// 	choice3: "Shikamaru Nara",
-	// 	choice4: "Obito Uchiha"
-	// }),
 	(shikamaru = [
 		"shikamaru",
 		"Which leaf village shinobi is best known for inelligence and strategic thinking?",
@@ -35,6 +13,14 @@ var questions = [
 		"Kakashi Hatake",
 		"Shikamaru Nara",
 		"Obito Uchiha"
+	]),
+	(killerBee = [
+		"killerBee",
+		"Which shinobi is most likely to release a rap single?",
+		"Gaara",
+		"Sasuke Uchiha",
+		"Might Guy",
+		"Killer Bee"
 	])
 ];
 console.log(questions);
@@ -49,11 +35,15 @@ $(document).ready(function() {
 	});
 	function renderGame() {
 		for (let i = 0; i < questions.length; i++) {
+			var questionDiv = $("<div></div>").addClass("questionDiv");
+			var questionHeader = $("<h3></h3>");
+
 			console.log(questions[i]);
-			quiz.append(questionDiv);
-			questionDiv.prepend(questionHeader);
+
+			questionDiv.append(questionHeader);
 			var q = questions[i];
 			questionHeader.html(q[1]);
+			quiz.append(questionDiv);
 
 			for (let j = 2; j < q.length; j++) {
 				var inputID = q[0];
